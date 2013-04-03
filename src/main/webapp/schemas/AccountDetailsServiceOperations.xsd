@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://com/blog/samples/webservices/accountservice" xmlns:account="http://webservices.samples.blog.com" targetNamespace="http://com/blog/samples/webservices/accountservice" elementFormDefault="qualified">
-	<xsd:import namespace="http://webservices.samples.blog.com" schemaLocation="Account4kick.xsd"/>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://com/kick/test/webservices/accountservice" xmlns:account="http://webservices.test.kick.com" targetNamespace="http://com/kick/test/webservices/accountservice" elementFormDefault="qualified">
+	<xsd:import namespace="http://webservices.test.kick.com" schemaLocation="Account4kick.xsd"/>
 	<xsd:element name="AccountDetailsRequest">
 		<xsd:complexType>
 			<xsd:sequence>

@@ -2,8 +2,8 @@ package com.blog.samples.services;
 
 import org.springframework.stereotype.Service;
 
-import com.blog.samples.webservices.Account;
-import com.blog.samples.webservices.EnumAccountStatus;
+import com.kick.test.webservices.Account;
+import com.kick.test.webservices.EnumAccountStatus;
 
 /**
  * The Class AccountService.
