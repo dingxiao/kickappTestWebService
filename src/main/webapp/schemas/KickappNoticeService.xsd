@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/KickappNotice/service"
+	xmlns:tns="http://www.example.org/KickappNotice/service"
+	elementFormDefault="qualified" xmlns:pref="http://www.example.org/KickappNotice">
+	<import schemaLocation="KickappNotice.xsd" namespace="http://www.example.org/KickappNotice"></import>
+
+	<element name="NoticeRequest" type="tns:NotificationRequestType"></element>
+
+	<element name="NoticeResponse" type="tns:NotificationStatus"></element>
+
+	<complexType name="NotificationRequestType">
+		<sequence>
+			<element name="Notificationinfo"
+				type="pref:NoticeInfoType">
+			</element>
+		</sequence>
+	</complexType>
+
+	<complexType name="NotificationStatus">
+		<sequence>
+			<element name="ReturnStatus" type="string"></element>
+		</sequence>
+	</complexType>
+</schema>

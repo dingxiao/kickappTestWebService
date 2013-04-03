@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/TestKickapp1Schema" xmlns:tns="http://www.example.org/TestKickapp1Schema" elementFormDefault="qualified">
+
+    <element name="NoticeElement" type="tns:NoticeType"></element>
+    
+    <complexType name="NoticeType">
+    	<sequence>
+    		<element name="name" type="string"></element>
+    		<element name="id" type="string"></element>
+    		<sequence>
+    			<element name="entry" type="tns:entryType">
+ 				</element>
+    		</sequence>
+    	</sequence>
+    </complexType>
+
+   	<complexType name="entryType">
+		<sequence>
+			<element name="value" type="string"></element>
+		</sequence>
+		<attribute name="id" type="string"></attribute>
+		<attribute name="type" type="string"></attribute>
+	</complexType>
+</schema>

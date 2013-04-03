@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch0="http://www.example.org/KickappNotice/service" xmlns:sch1="http://www.example.org/KickappNotice" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.example.org/KickappNotice/service" targetNamespace="http://www.example.org/KickappNotice/service">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:pref="http://www.example.org/KickappNotice" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.example.org/KickappNotice/service"><import namespace="http://www.example.org/KickappNotice"/><element name="NoticeRequest" type="tns:NotificationRequestType"/><element name="NoticeResponse" type="tns:NotificationStatus"/><complexType name="NotificationRequestType"><sequence><element name="Notificationinfo" type="pref:NoticeInfoType"/></sequence></complexType><complexType name="NotificationStatus"><sequence><element name="ReturnStatus" type="string"/></sequence></complexType></schema>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/KickappNotice" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.example.org/KickappNotice"><element name="NoticeInfo" type="tns:NoticeInfoType"/><complexType name="NoticeInfoType"><sequence><element name="ccn" type="string"/><element name="status" type="string"/><element name="preference" type="tns:entryType"/></sequence></complexType><complexType name="entryType"><sequence><element name="entry" type="tns:entryType2"/></sequence></complexType><complexType name="entryType2"><attribute name="name" type="string"/></complexType></schema>
+  </wsdl:types>
+  <wsdl:message name="NoticeRequest">
+    <wsdl:part element="tns:NoticeRequest" name="NoticeRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="NoticeResponse">
+    <wsdl:part element="tns:NoticeResponse" name="NoticeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="SendNoticeService">
+    <wsdl:operation name="Notice">
+      <wsdl:input message="tns:NoticeRequest" name="NoticeRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:NoticeResponse" name="NoticeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SendNoticeServiceSoap11" type="tns:SendNoticeService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Notice">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="NoticeRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="NoticeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SendNoticeServices">
+    <wsdl:port binding="tns:SendNoticeServiceSoap11" name="SendNoticeServiceSoap11">
+      <soap:address location="http://localhost:8080/spring2/endpoints"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
