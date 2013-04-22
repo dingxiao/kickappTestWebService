@@ -13,8 +13,13 @@
 
 	<context:component-scan base-package="org.example.test.service" />
 	<sws:annotation-driven />
-
-
+	
+ <!-- To detect @Endpoint 
+<sws:annotation-driven/>
+-->
+<!-- To detect @Service, @Component etc
+<context:component-scan base-package="your package for eg com.employee" />
+-->
 	<!--
 		kickapp test service bean
 	-->

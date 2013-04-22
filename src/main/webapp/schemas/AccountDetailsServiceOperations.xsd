@@ -19,7 +19,7 @@
 	<xsd:element name="Account4kickRequest">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element name="KickInfo" type="account:Account4kickInput"/>
+				<xsd:element name="setPromotionValues" type="account:Account4kickInput"/>
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>

@@ -20,16 +20,24 @@
 
 	<xs:complexType name="Account4kickInput">
 		<xs:sequence>
-			<xs:element name="Cnn" type="xs:string"/>
-			<xs:element name="Name" type="xs:string"/>
-			<xs:element name="Status" type="xs:double"/>
-			<xs:element name="Preference" type="PrefType"/>
+			<xs:element name="ccn" type="xs:long"/>
+			<xs:element name="prmotionName" type="xs:string"/>
+			<xs:element name="securityToken" type="xs:string"/>
+			<xs:element name="preference" type="PrefType"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="PrefType">
 		<xs:sequence>
-			<xs:element name="Entry" type="xs:string"/>
+			<xs:element name="Entry" type="EntryType" />
 		</xs:sequence>
 	</xs:complexType>
 	
+
+	<xs:complexType name="EntryType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="Name" type="xs:string"></xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
 </xs:schema>

@@ -6,7 +6,7 @@
 //
 
 
-package org.example.kickappnotice;
+package com.kick.test.webservices;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -16,15 +16,15 @@ import javax.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for entryType2 complex type.
+ * <p>Java class for EntryType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="entryType2">
+ * &lt;complexType name="EntryType">
  *   &lt;simpleContent>
  *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
- *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *       &lt;attribute name="Name" type="{http://www.w3.org/2001/XMLSchema}string" />
  *     &lt;/extension>
  *   &lt;/simpleContent>
  * &lt;/complexType>
@@ -33,14 +33,14 @@ import javax.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "entryType2", propOrder = {
+@XmlType(name = "EntryType", propOrder = {
     "value"
 })
-public class EntryType2 {
+public class EntryType {
 
     @XmlValue
     protected String value;
-    @XmlAttribute(name = "name")
+    @XmlAttribute(name = "Name")
     protected String name;
 
     /**
